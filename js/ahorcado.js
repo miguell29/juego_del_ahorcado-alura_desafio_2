@@ -3,6 +3,7 @@ var palabras=["argentina","bolivia","brazil","chile","colombia","peru","uruguay"
 
 //************* Capturas de eventos del DOM**************//
 var listaDeCaracteres=document.getElementById("lista-caracteres");
+var pantallaInicial = document.getElementById("pantalla-inicial")
 var botonDeInicio = document.getElementById("iniciar-juego");
 
 
@@ -59,13 +60,11 @@ function derrota(){
 botonDeInicio.addEventListener("click",function(event){
     event.preventDefault()
     alert("se presiono inicio");
+    pantallaInicial.classList.add("invisible")
     lienso.classList.remove("invisible")
-    ahorcado()
+    ahorcado();
+    palabraAzar();
+    deletrear();
+    mostrarLetras(palabra);
+
 })
-
-
-var ñ= palabraAzar()
-
-var j= deletrear()
-
-var l=mostrarLetras(palabra)

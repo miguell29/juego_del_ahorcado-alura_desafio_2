@@ -1,67 +1,72 @@
 var lienso = document.getElementById("ahorcado");
 var canvas = lienso.getContext("2d");
 
-
-lienso.classList.add("invisible")  //EN EL INICIO NO SE MUESTRA EL CANVAS//
+canvas.lineWidth=4.5;
+canvas.lineCap = "round";
+canvas.strokeStyle = "#0A3871"
 
 
 
 
 function ahorcado(){
     //base
-   if(vidas === 6){
+   if(fallas === 0){
     canvas.beginPath();
-    canvas.moveTo(0,503);
-    canvas.lineTo(294,503);
+    canvas.moveTo(0,355);
+    canvas.lineTo(294,355);
     canvas.lineWidth = 5;
     canvas.stroke();
 
     canvas.beginPath();
-    canvas.moveTo(80.67,503);
-    canvas.lineTo(80.67,148);
-    canvas.lineTo(831.42-573,148);
-    canvas.lineTo(831.42-573,197.5)
+    canvas.moveTo(80.67,503-148);
+    canvas.lineTo(80.67,2);
+    canvas.lineTo(831.42-573,2);
+    canvas.lineTo(831.42-573,49.5)
     canvas.stroke();
    } 
 //cabeza
-   if(vidas === 5){
+   if(fallas === 1){
     canvas.beginPath();
-    canvas.arc(258.42,229,31.5,0,Math.PI * 2);
+    canvas.arc(258.42,81,31.5,0,Math.PI * 2);
     canvas.stroke();
    }
 //brazao derecho
-   if (vidas === 4){
+   if (fallas === 4){
     canvas.beginPath();
-    canvas.moveTo(258,260.5);
-    canvas.lineTo(293.52,319.48);
+    canvas.moveTo(258,112.5);
+    canvas.lineTo(293.52,171.48);
     canvas.stroke();
    }
    //brazo izquierdo
-   if( vidas === 3){
+   if( fallas === 3){
     canvas.beginPath();
-    canvas.moveTo(258,260.5);
-    canvas.lineTo(218.75,319.48);
+    canvas.moveTo(258,112.5);
+    canvas.lineTo(218.75,171.48);
     canvas.stroke();
    }
 //cuerpo
-   if(vidas === 2){
+   if(fallas === 2){
     canvas.beginPath();
-    canvas.moveTo(258,260.5);
-    canvas.lineTo(258,391);
+    canvas.moveTo(258,112.5);
+    canvas.lineTo(258,235);
     canvas.stroke();
    }
 //pierna derecha
-   if(vidas === 1){
+   if(fallas === 6){
     canvas.beginPath();
-    canvas.moveTo(258,387.62);
-    canvas.lineTo(258.52,452.23)
+    canvas.moveTo(258,230.62);
+    canvas.lineTo(293.52,304.23)
     canvas.stroke();
    }
 //pierna izquierda
-   if(vidas === 0){
+   if(fallas === 5){
     canvas.beginPath();
-    canvas.moveTo(258,387.62);
-    canvas.lineTo(218.75,452.23);
+    canvas.moveTo(258,230.62);
+    canvas.lineTo(218.75,304.23);
     canvas.stroke();
    }
+}
+
+function limpiarCanvas(){
+   canvas.clearRect(0,0,300,360);
 }

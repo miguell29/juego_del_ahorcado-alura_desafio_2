@@ -1,54 +1,148 @@
 
-.titulo {
-  padding: 15px;
-  width: 30vw;
-  margin: auto;
-
+body{
+  background-color: #E5E5E5;
+  font-family: inter;
+  color: darkblue;
 }
 
-.btn {
-  border: 0;
-  color: white;
+header{
+  margin: 0 auto;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+figure{
+  width: 31px;
+}
+#win{
+  color: green;
+  font-size: 2rem;
   font-weight: bold;
-  background-color: blue;
-  padding: 10px;
+}
+
+#fin{
+  color: red;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+img{
+  width: 100%;
+}
+/**************************PANTALLA PRINCIPAL Y CONFIG GENERAL DE BOTONES*************************/
+#pantalla-inicial{
+  padding-top: 5rem;
+  margin: 24px;
+}
+
+button{
+  font-style: normal;
+  color: darkblue;
+  background-color: #E5E5E5;
+  border: solid darkblue 0.1rem;
+  border-radius: 1rem;
+}
+
+button:hover{
+  background-color: darkblue;
+  color: #FFFFFF;
+}
+.btn-principal{
+  padding: 24px;
+  font-size: 1rem;
+  width: 30rem;
+  border-radius: 1rem;
+}
+.btn {
+  padding: 2rem;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-radius: 0.5em;
+  
 }
 
-.text-input {
-  border-radius: 0.5em;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  display: block;
-  padding: 0.5em;
-  width: 30%;
-  height: 50px;
-  margin-left: auto;
-  margin-right: auto;
+
+/*****************************************PANTALLA SECUNDARIA***********************************/
+.segunda-pantalla{
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  padding-left: 10vw;
+  height: 80vh;
 }
+h2{
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 32px;
+}
+
+
+.text-input {
+  text-align: center;
+  font-size: 1rem;
+  display: block;
+  width: 80vw;
+  height: 50px;
+  margin: 5rem 10vw;
+  background-color: #E5E5E5;
+  border: solid darkblue 0.1rem;
+  border-radius: 1rem;
+}
+
+.btn-agregar, .btn-cancelar{
+  padding: 2rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+  margin: 3rem auto;
+}
+
 
                   /************ LETRAS DEL AHORCADO **********/
 
-#lista-caracteres{
+#lista-caracteres, #lista-renglones, #lista-correcta{
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 
 }
-#lista-caracteres li{
+#lista-caracteres li, #lista-renglones li, #lista-correcta{
   padding: 0.2rem;
   margin: 0.2rem;
   display: inline-block;
-  border: solid 0.1rem;
+}
+#lista-renglones li p{
+  text-align: center;
+  width: 100%;
 }
 
+#lista-caracteres{
+  color: red;
+}
+
+
+
+/*************************BOTONES EN EL JUEGO******************************/
+.juego-nuevo, .terminar-juego{
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+.botones-juego{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
 
 .invisible{
   display: none;
-}
-
-.ahorcado{
-  width: 600px;
 }

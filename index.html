@@ -6,26 +6,52 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Ahorcado</title>
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <section id="pantalla-inicial">
-      <div style="text-align:center; margin: 50px 0px;">
-        <h1 class="titulo">Ahorcado</h1>
-        <button class="btn" id="iniciar-juego">INICIAR JUEGO</button>
-      </div>
-      <div style="text-align:center">
-        <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Escriba una nueva palabra">
-        <button class="btn" id="nueva-palabra">AGREGAR PALABRA</button> 
-      </div>
-    </section>
-    
+    <header>
+      <nav>
+        <a href="https://www.aluracursos.com/challenges/oracle-one/semana03y04-crea-tu-propio-juego-del-ahorcado-con-javascript"><figure>
+          <img src="img/logoaalura.png" alt="logo de alura" title="desafio2 juego del ahorcado- alura challenge">
+        </figure></a>
+        <p id="win">!Flicidades, Ganaste!!!!</p>
+        <p id="fin">!lo siento Perdiste!</p>
+        <figure id="img-sonido"><img src="img/audio.png" alt="" ></figure>
+        <figure id="img-mute"><img src="img/mute.png" alt="img-mute"></figure>
+      </nav>
+      
+    </header>
     <div style="text-align:center;">
-      <canvas id="ahorcado" height="600px" width="300px"></canvas>
+      <canvas id="ahorcado" height="360px" width="300px"></canvas>
     </div>
 
+    <section id="pantalla-inicial">
+      <div style="text-align:center; margin: 50px 0px;">
+        <button class="btn-principal" id="iniciar-juego">Iniciar juego</button>
+      </div>
+      <div style="text-align:center">
+        
+        <button class="btn" id="nueva-palabra">Agregar nueva palabra</button> 
+      </div>
+    </section>
+
+
     <section>
+          <h2 id="h2">Ingrese una palabra</h2>
+          <input class="text-input" type="text" id="input-nueva-palabra" placeholder="Max. de 10 letras" maxlength="10">
+          <button class="btn-agregar" id="Agregar-palabra">Guardar y empezar</button>
+          <button class="btn-cancelar" id="cancelar">Cancelar</button>
+      </section>
+
+    <section id="letras">
+        <ul id="lista-renglones"></ul>
         <ul id="lista-caracteres"></ul>
+    </section>
+
+    <section id="botones-juego" class="botones-juego">
+      <button id="juego-nuevo" class="juego-nuevo">Nuevo juego</button>
+      <button id="terminar-juego" class="terminar-juego">Terminar juego</button>
     </section>
     <script type="text/javascript" src="js/canvas.js"></script>
     <script type="text/javascript" src="js/ahorcado.js"></script>
